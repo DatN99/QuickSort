@@ -24,7 +24,7 @@ public class Main {
 
 
     //make array here
-        int[] array = {3, 4, 5, 1, 2,6, 8,7, 10, 20, 25, 30};
+        int[] array = {1, 4, 2, 3, 5, 7, 6,9};
 	quicksort(array, 0, array.length-1);
 	print(array);
     }
@@ -40,17 +40,27 @@ public class Main {
     }
 
     public static void quicksort(int[] array, int i , int j){
+
+        //either only one node left or j has gone to -1
         if (i >= j){
             return;
         }
 
         else{
 
+            //find pivot between first element, last element, and middle element
             int pivot = findMedian(array, i, i+(j-i)/2, j);
 
+            //swap pivot and last element
             swap(array, pivot, j);
+
+            //partition array
             pivot = partition(array, i, j-1, j);
+
+            //quicksort left subarray
             quicksort(array, i, pivot-1);
+
+            //quicksort right subarray
             quicksort(array, pivot + 1, j);
         }
     }
