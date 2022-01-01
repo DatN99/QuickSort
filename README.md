@@ -1,7 +1,7 @@
 # QuickSort
 My own implementation of quick sort algorithm
 
-This class holds my implementation of a quicksort. 
+src/com/company/Main.java holds my implementation of a quicksort. 
  
 To partition the array, each element is iterated through on the first iteration. On the second recursion, half of the array is iterated through. On the third, half and so on...
 Therefore, the average/worst-case time complexity for partitioning is O(n) since each element is iterated over at least once
