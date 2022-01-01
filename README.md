@@ -1,5 +1,4 @@
 # QuickSort
-My own implementation of quick sort algorithm
 
 src/com/company/Main.java holds my implementation of a quicksort. 
  
